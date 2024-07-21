@@ -1,0 +1,37 @@
+package layout
+
+
+templ Layout(contents templ.Component) {
+	@Head()
+	@Navbar()
+	<div id="contents">
+		@contents
+	</div>
+	@Footer()
+}
+
+templ Head() {
+	<head>
+		<title>wnotes</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="/static/css/output.css">
+		<script src="https://unpkg.com/htmx.org@2.0.1" integrity="sha384-QWGpdj554B4ETpJJC9z+ZHJcA/i59TyjxEPXiiUgN2WmTyV5OEZWCD6gQhgkdpB/" crossorigin="anonymous"></script>
+	</head>
+}
+
+templ Navbar() {
+	<div>
+		<h1>wnotes</h1>
+	</div>
+}
+
+templ Footer() {
+
+}
+
+templ Content(content string) {
+	<div class="text-2xl">
+		This is the content: {content}
+	</div>
+}

@@ -1,0 +1,21 @@
+package editor
+
+templ Editor() {
+	<div>
+		<div class="w-[1000px]">
+			<div class="border rounded-xl">
+				<div id="editor">
+					<h2>Demo content</h2>
+					<p>Preset build with <code>snow</code> theme, and some common formats.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.js"></script>
+	<link href="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.snow.css" rel="stylesheet">
+	<script>
+		const quill = new Quill("#editor", {
+			theme: 'snow'
+		})
+	</script>
+}
